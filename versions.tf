@@ -24,5 +24,4 @@ provider "aws" {
 
 # Address and token from VAULT_ADDR / VAULT_TOKEN.
 provider "vault" {
-  namespace = var.vault_namespace != "" ? var.vault_namespace : null
 }

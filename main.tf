@@ -1,8 +1,7 @@
 data "aws_caller_identity" "current" {}
 
-locals {
-  ns_path    = var.vault_namespace != "" ? "/${trim(var.vault_namespace, "/")}" : ""
-  issuer_url = "${var.vault_public_url}/v1${local.ns_path}/identity/oidc/secrets-sync"
+locals { 
+  issuer_url = "${var.vault_public_url}/v1/identity/oidc/secrets-sync"
   issuer     = trimprefix(local.issuer_url, "https://")
   audience   = local.issuer # recommended by the Vault docs: unique per issuer
 }

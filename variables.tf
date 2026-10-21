@@ -4,11 +4,7 @@ variable "aws_region" {
   default     = "eu-west-2"
 }
 
-variable "vault_namespace" {
-  description = "Vault namespace for the destination. Empty for root."
-  type        = string
-  default     = ""
-}
+
 
 variable "vault_public_url" {
   description = "Public HTTPS base URL (publicly trusted cert) where AWS STS can reach Vault's OIDC discovery endpoints, e.g. https://vault.example.com. No trailing slash."
