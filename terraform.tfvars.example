@@ -1,0 +1,12 @@
+aws_region       = "eu-west-1"
+vault_namespace  = ""
+vault_public_url = "https://vault.example.com"
+destination_name = "aws-sm"
+
+# Test KV mount + 2 secrets, synced automatically (see test_secrets.tf)
+create_test_secrets = true
+
+# Extra existing secrets to sync
+associations = [
+  # { mount = "secret", secret_name = "app2/config" },
+]
